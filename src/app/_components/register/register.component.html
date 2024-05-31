@@ -1,0 +1,35 @@
+<br><br>
+<div style="text-align: center;">
+  <h1>Creating new account</h1>
+</div>
+<br>
+<div style="text-align: center;">
+  <div class="row">
+    <div>
+      <input #firstName id="firstName" placeholder="First name" type="text">
+    </div>
+    <div>
+      <input #lastName id="lastName" placeholder="Last name" type="text">
+    </div>
+    <div>
+      <input #email id="email" placeholder="Email" type="email">
+    </div>
+    <div>
+      <input #password id="password" placeholder="Password" type="password">
+    </div>
+    <div>
+      <input #company id="company" placeholder="Company" type="number">
+    </div>
+  </div>
+</div>
+<div style="text-align: center; margin-top: 75px">
+  <div>
+    <h3>Register as</h3>
+  </div>
+  <div>
+    <input (click)="registerTruckManager(firstName.value, lastName.value, email.value, password.value, company.value)"
+           type="button" value="Driver">
+    <input (click)="registerParkingManager(firstName.value, lastName.value, email.value, password.value, company.value)"
+           type="button" value="Manager">
+  </div>
+</div>

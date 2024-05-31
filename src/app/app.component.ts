@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Router} from "@angular/router";
+import {LoginService} from "./_services/login.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'LogiHubWeb';
+
+  protected readonly LoginService = LoginService;
+
+  constructor(private router: Router) {
+  }
+
+  protected async logout() {
+    await LoginService.logout(this.router)
+  }
 }
