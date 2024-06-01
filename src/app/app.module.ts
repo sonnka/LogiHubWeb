@@ -6,9 +6,13 @@ import {AppComponent} from './app.component';
 import {LoginComponent} from './_components/login/login.component';
 import {RegisterComponent} from './_components/register/register.component';
 import {provideAnimationsAsync} from "@angular/platform-browser/animations/async";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NgOptimizedImage} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
+import {MatFormField} from "@angular/material/form-field";
+import {MatOption} from "@angular/material/core";
+import {MatAutocomplete, MatAutocompleteTrigger} from "@angular/material/autocomplete";
+import {MatInput} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -21,7 +25,13 @@ import {HttpClientModule} from "@angular/common/http";
     AppRoutingModule,
     HttpClientModule,
     NgOptimizedImage,
-    FormsModule
+    FormsModule,
+    MatFormField,
+    MatOption,
+    MatAutocomplete,
+    ReactiveFormsModule,
+    MatAutocompleteTrigger,
+    MatInput
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent]

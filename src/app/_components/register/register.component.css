@@ -8,6 +8,7 @@ input[type=text] {
   padding: .4em;
   color: darkslategray;
   margin-top: 20px;
+  background-color: #ffffff !important;
 }
 
 input[type=email] {
@@ -74,4 +75,29 @@ input[type="file"] {
   border-radius: 10em;
   transition: 1s;
   background: #ffffff;
+}
+
+mat-autocomplete {
+  background-color: #ffffff !important;
+}
+
+mat-input-element {
+  font-size: 17px;
+  color: darkslategray;
+  border: none;
+  border-radius: .2em .2em 0 0;
+  outline: none;
+  padding: .4em;
+  background-color: #ffffff !important;
+}
+
+mat-input-element::placeholder {
+  color: darkslategray;
+  background-color: #ffffff !important;
+}
+
+mat-option {
+  font-size: 17px;
+  color: darkslategray;
+  background-color: #ffffff !important;
 }
