@@ -1,14 +1,12 @@
-import {AuthToken} from './auth-token';
-
 export class LoginResponse {
   id: bigint;
-  token: AuthToken;
+  token: string;
   role: string;
   name: string;
   surname: string;
   avatar: string;
 
-  constructor(id: bigint, token: AuthToken, role: string, name: string, surname: string, avatar: string) {
+  constructor(id: bigint, token: string, role: string, name: string, surname: string, avatar: string) {
     this.id = id;
     this.token = token;
     this.role = role;

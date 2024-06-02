@@ -15,7 +15,7 @@ export class LoginComponent {
   protected async login(email: string, password: string) {
     try {
       let loginResponse = await this.loginService.login(email, password);
-      let token = loginResponse?.token?.access_token!;
+      let token = loginResponse?.token!;
       let id = loginResponse?.id!;
       let role = loginResponse?.role!;
       await this.redirectPage(token, id, role.toLowerCase());

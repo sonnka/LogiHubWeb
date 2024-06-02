@@ -7,6 +7,18 @@
     <div *ngIf="!LoginService.isAuthorize()">
       <a class="link" href="/register">Register</a>
     </div>
+    <div *ngIf="LoginService.isAdmin()">
+      <a class="link" href="/admin-profile">Profile</a>
+    </div>
+    <!--    <div *ngIf="LoginService.isAdmin()">-->
+    <!--      <a class="link" href="/drivers">Drivers</a>-->
+    <!--    </div>-->
+    <!--    <div *ngIf="LoginService.isAdmin()">-->
+    <!--      <a class="link" href="/managers">Managers</a>-->
+    <!--    </div>-->
+    <div *ngIf="LoginService.isChiefAdmin()">
+      <a class="link" href="/database">Database</a>
+    </div>
     <div (click)="logout()" *ngIf="LoginService.isAuthorize()">
       <a class="link" href="/login">Logout</a>
     </div>
