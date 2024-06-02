@@ -18,6 +18,8 @@ import {AdminUpdateProfileComponent} from './_components/admin-update-profile/ad
 import {DatabaseComponent} from './_components/database/database.component';
 import {MatIcon} from "@angular/material/icon";
 import {MatMiniFabButton} from "@angular/material/button";
+import {TruckManagersPageComponent} from './_components/truck-managers-page/truck-managers-page.component';
+import {ParkingManagersPageComponent} from './_components/parking-managers-page/parking-managers-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import {MatMiniFabButton} from "@angular/material/button";
     RegisterComponent,
     AdminProfileComponent,
     AdminUpdateProfileComponent,
-    DatabaseComponent
+    DatabaseComponent,
+    TruckManagersPageComponent,
+    ParkingManagersPageComponent
   ],
   imports: [
     BrowserModule,

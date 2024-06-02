@@ -111,8 +111,7 @@ export class AdminService {
         Accept: "application/pdf",
         'Authorization': 'Bearer ' + this.token
       }),
-      responseType: 'arraybuffer' as const,
-      withCredentials: true
+      responseType: 'arraybuffer' as const
     };
 
     return this.http.get(this.baseUrl + "/admins/" + this.id + "/db/week-report",
@@ -128,8 +127,7 @@ export class AdminService {
         Accept: "application/pdf",
         'Authorization': 'Bearer ' + this.token
       }),
-      responseType: 'arraybuffer' as const,
-      withCredentials: true
+      responseType: 'arraybuffer' as const
     };
 
     return this.http.get(this.baseUrl + "/admins/" + this.id + "/db/month-report",
@@ -145,8 +143,7 @@ export class AdminService {
         Accept: "application/zip",
         'Authorization': 'Bearer ' + this.token
       }),
-      responseType: 'arraybuffer' as const,
-      withCredentials: true
+      responseType: 'arraybuffer' as const
     };
 
     return this.http.get(this.baseUrl + "/admins/" + this.id + "/db/export",
@@ -162,8 +159,7 @@ export class AdminService {
     let httpOptions = {
       headers: new HttpHeaders({
         'Authorization': 'Bearer ' + this.token
-      }),
-      withCredentials: true
+      })
     };
 
     return await this.http.post(this.baseUrl + "/admins/" + this.id + "/db/import", formData,

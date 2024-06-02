@@ -1,9 +1,8 @@
 <br><br>
 <div style="text-align: center;">
-  <h3>Creating new account</h3>
+  <h5>Creating new account</h5>
 </div>
-<br>
-<div id="registerRole" style="text-align: center; margin-top: 55px; display: block;">
+<div id="registerRole" style="text-align: center; margin-top: 75px; display: block;">
   <div>
     <h6>Register as</h6>
   </div>
@@ -29,18 +28,19 @@
     <div>
       <input #password id="password" placeholder="Password" type="password">
     </div>
-
-    <input (focus)="openAutocomplete()" [formControl]="dataControl" [matAutocomplete]="auto" matInput
-           placeholder="Choose a company"
-           type="text">
-    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onOptionSelected($event.option.value)"
-                      [displayWith]="displayFn">
-      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-        {{ option.name }}
-      </mat-option>
-    </mat-autocomplete>
+    <div>
+      <input (focus)="openAutocomplete()" [formControl]="dataControl" [matAutocomplete]="auto" matInput
+             placeholder="Choose a company"
+             type="text">
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onOptionSelected($event.option.value)"
+                        [displayWith]="displayFn">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{ option.name }}
+        </mat-option>
+      </mat-autocomplete>
+    </div>
   </div>
-  <br>
+  <br> <br>
   <div>
     <input (click)="register(firstName.value, lastName.value, email.value, password.value)"
            type="button" value="Register">
