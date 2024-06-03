@@ -7,8 +7,10 @@ import {AdminUpdateProfileComponent} from "./_components/admin-update-profile/ad
 import {AdminProfileComponent} from "./_components/admin-profile/admin-profile.component";
 import {TruckManagersPageComponent} from "./_components/truck-managers-page/truck-managers-page.component";
 import {ParkingManagersPageComponent} from "./_components/parking-managers-page/parking-managers-page.component";
+import {HomeComponent} from "./_components/home/home.component";
 
 const routes: Routes = [
+  {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'admin-profile', component: AdminProfileComponent},

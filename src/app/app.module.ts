@@ -20,6 +20,7 @@ import {MatIcon} from "@angular/material/icon";
 import {MatMiniFabButton} from "@angular/material/button";
 import {TruckManagersPageComponent} from './_components/truck-managers-page/truck-managers-page.component';
 import {ParkingManagersPageComponent} from './_components/parking-managers-page/parking-managers-page.component';
+import {HomeComponent} from './_components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {ParkingManagersPageComponent} from './_components/parking-managers-page/
     AdminUpdateProfileComponent,
     DatabaseComponent,
     TruckManagersPageComponent,
-    ParkingManagersPageComponent
+    ParkingManagersPageComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
