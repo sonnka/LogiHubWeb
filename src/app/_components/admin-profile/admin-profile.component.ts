@@ -58,6 +58,11 @@ export class AdminProfileComponent {
     }
   }
 
+  protected async connect(host: string) {
+    await this.adminService.connect(host);
+    location.reload();
+  }
+
   private async getAdminProfile() {
     try {
       this.adminResponse = await this.adminService.getAdmin();

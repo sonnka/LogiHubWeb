@@ -14,6 +14,7 @@ import {DatabaseHistoryDTO} from "../_models/response/database-history-dto";
 export class AdminService {
 
   private baseUrl = 'http://localhost:8080/api';
+  private iotUrl = 'http://localhost:5000';
 
   private token: string | undefined;
   private id: string | undefined;
@@ -93,6 +94,19 @@ export class AdminService {
 
     return await this.http.delete(this.baseUrl + '/admins/' + this.id +
       "/parking-managers/" + parkingManagerId, this.httpOptions).toPromise();
+  }
+
+  async connect(host: string) {
+    await this.getCredentials()
+
+    let httpOptions = {
+      headers: new HttpHeaders({
+        "Content-Type": "text"
+      })
+    };
+
+    return await this.http.post(this.iotUrl + '/connect/' + host,
+      null, this.httpOptions).toPromise();
   }
 
   async getWeekDatabaseHistory() {
