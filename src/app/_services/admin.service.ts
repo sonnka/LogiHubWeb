@@ -15,7 +15,6 @@ export class AdminService {
 
   private baseUrl = 'http://localhost:8080/api';
   private iotUrl = 'http://localhost:5000';
-
   private token: string | undefined;
   private id: string | undefined;
   private httpOptions: { headers: HttpHeaders } | undefined;
@@ -26,7 +25,8 @@ export class AdminService {
   async getAdmin() {
     await this.getCredentials()
 
-    return await this.http.get<AdminDTO>(this.baseUrl + '/admins/' + this.id, this.httpOptions).toPromise();
+    return await this.http.get<AdminDTO>(
+      this.baseUrl + '/admins/' + this.id, this.httpOptions).toPromise();
   }
 
   async addAdmin(email: string) {

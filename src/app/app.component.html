@@ -10,6 +10,18 @@
     <div *ngIf="LoginService.isAdmin()">
       <a class="link" href="/admin-profile">Profile</a>
     </div>
+    <div *ngIf="LoginService.isTruckManager()">
+      <a class="link" href="/truck-manager">Profile</a>
+    </div>
+    <div *ngIf="LoginService.isParkingManager()">
+      <a class="link" href="/parking-manager">Profile</a>
+    </div>
+    <div *ngIf="LoginService.isTruckManager()">
+      <a class="link" href="/truck-manager/invoices">Invoices</a>
+    </div>
+    <div *ngIf="LoginService.isParkingManager()">
+      <a class="link" href="/parking-manager/invoices">Invoices</a>
+    </div>
     <div *ngIf="LoginService.isAdmin()">
       <a class="link" href="/truck-managers">Truck managers</a>
     </div>
