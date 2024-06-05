@@ -138,43 +138,50 @@ export class ParkingManagerService {
       this.httpOptions).toPromise();
   }
 
-  async getInvoices() {
+  async getInvoices(page: number) {
     await this.getCredentials();
 
     return await this.http.get<PaginatedResponse<ShortInvoiceDTO>>(
-      this.baseUrl + '/parking-manager/' + this.id + "/invoices",
+      this.baseUrl + '/parking-manager/' + this.id + "/invoices?size=7&page=" + page,
       this.httpOptions).toPromise();
   }
 
-  async searchInvoices(placeNumber: string) {
+  async searchInvoices(placeNumber: string, page: number) {
     await this.getCredentials();
 
     return await this.http.get<PaginatedResponse<ShortInvoiceDTO>>(
-      this.baseUrl + '/parking-manager/' + this.id + "/invoices/place-number/" + placeNumber,
+      this.baseUrl + '/parking-manager/' + this.id + "/invoices/place-number/" + placeNumber
+      + '?size=7&page=' + page,
       this.httpOptions).toPromise();
   }
 
-  async getSignedInvoices() {
+  async getSignedInvoices(placeNumber: string, page: number) {
     await this.getCredentials();
 
+    var prams = "?size=7&page=" + page + "&placeNumber=" + placeNumber;
+
     return await this.http.get<PaginatedResponse<ShortInvoiceDTO>>(
-      this.baseUrl + '/parking-manager/' + this.id + "/invoices/signed",
+      this.baseUrl + '/parking-manager/' + this.id + "/invoices/signed" + prams,
       this.httpOptions).toPromise();
   }
 
-  async getNotSignedByParkingManagerInvoices() {
+  async getNotSignedByParkingManagerInvoices(placeNumber: string, page: number) {
     await this.getCredentials();
 
+    var prams = "?size=7&page=" + page + "&placeNumber=" + placeNumber;
+
     return await this.http.get<PaginatedResponse<ShortInvoiceDTO>>(
-      this.baseUrl + '/parking-manager/' + this.id + "/invoices/not-signed-by-parking-manager",
+      this.baseUrl + '/parking-manager/' + this.id + "/invoices/not-signed-by-parking-manager" + prams,
       this.httpOptions).toPromise();
   }
 
-  async getNotSignedByTruckManagerInvoices() {
+  async getNotSignedByTruckManagerInvoices(placeNumber: string, page: number) {
     await this.getCredentials();
 
+    var prams = "?size=7&page=" + page + "&placeNumber=" + placeNumber;
+
     return await this.http.get<PaginatedResponse<ShortInvoiceDTO>>(
-      this.baseUrl + '/parking-manager/' + this.id + "/invoices/not-signed-by-truck-manager",
+      this.baseUrl + '/parking-manager/' + this.id + "/invoices/not-signed-by-truck-manager" + prams,
       this.httpOptions).toPromise();
   }
 
