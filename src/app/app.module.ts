@@ -28,20 +28,16 @@ import {
   ParkingManagerProfileComponent
 } from './_components/_parking-manager/parking-manager-profile/parking-manager-profile.component';
 import {UpdateProfileComponent} from './_components/_general/update-profile/update-profile.component';
-import {
-  TruckManagerInvoicesComponent
-} from './_components/_truck-manager/truck-manager-invoices/truck-manager-invoices.component';
-import {
-  ParkingManagerInvoicesComponent
-} from './_components/_parking-manager/parking-manager-invoices/parking-manager-invoices.component';
 import {TruckComponent} from './_components/_truck-manager/truck/truck.component';
 import {TruckUpdateComponent} from './_components/_truck-manager/truck-update/truck-update.component';
 import {ParkingPlaceComponent} from './_components/_parking-manager/parking-place/parking-place.component';
 import {
   ParkingPlaceUpdateComponent
 } from './_components/_parking-manager/parking-place-update/parking-place-update.component';
-import {InvoiceComponent} from './_components/_general/invoice/invoice.component';
 import {InvoiceUpdateComponent} from './_components/_truck-manager/invoice-update/invoice-update.component';
+import {TruckInvoicesComponent} from './_components/_truck-manager/truck-invoices/truck-invoices.component';
+import {ParkingInvoicesComponent} from './_components/_parking-manager/parking-invoices/parking-invoices.component';
+import {InvoiceComponent} from './_components/_truck-manager/invoice/invoice.component';
 
 @NgModule({
   declarations: [
@@ -57,14 +53,14 @@ import {InvoiceUpdateComponent} from './_components/_truck-manager/invoice-updat
     TruckManagerProfileComponent,
     ParkingManagerProfileComponent,
     UpdateProfileComponent,
-    TruckManagerInvoicesComponent,
-    ParkingManagerInvoicesComponent,
     TruckComponent,
     TruckUpdateComponent,
     ParkingPlaceComponent,
     ParkingPlaceUpdateComponent,
-    InvoiceComponent,
-    InvoiceUpdateComponent
+    InvoiceUpdateComponent,
+    TruckInvoicesComponent,
+    ParkingInvoicesComponent,
+    InvoiceComponent
   ],
   imports: [
     BrowserModule,

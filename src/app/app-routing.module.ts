@@ -13,7 +13,6 @@ import {
 } from "./_components/_truck-manager/truck-manager-profile/truck-manager-profile.component";
 import {TruckUpdateComponent} from "./_components/_truck-manager/truck-update/truck-update.component";
 import {TruckComponent} from "./_components/_truck-manager/truck/truck.component";
-import {InvoiceComponent} from "./_components/_general/invoice/invoice.component";
 import {InvoiceUpdateComponent} from "./_components/_truck-manager/invoice-update/invoice-update.component";
 import {
   ParkingManagerProfileComponent
@@ -22,10 +21,10 @@ import {ParkingPlaceComponent} from "./_components/_parking-manager/parking-plac
 import {
   ParkingPlaceUpdateComponent
 } from "./_components/_parking-manager/parking-place-update/parking-place-update.component";
-import {
-  ParkingManagerInvoicesComponent
-} from "./_components/_parking-manager/parking-manager-invoices/parking-manager-invoices.component";
 import {UpdateProfileComponent} from "./_components/_general/update-profile/update-profile.component";
+import {InvoiceComponent} from "./_components/_truck-manager/invoice/invoice.component";
+import {TruckInvoicesComponent} from "./_components/_truck-manager/truck-invoices/truck-invoices.component";
+import {ParkingInvoicesComponent} from "./_components/_parking-manager/parking-invoices/parking-invoices.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -41,15 +40,15 @@ const routes: Routes = [
   {path: 'truck', component: TruckComponent},
   {path: 'truck/update', component: TruckUpdateComponent},
   {path: 'truck/create', component: TruckUpdateComponent},
-  {path: 'truck-manager/invoices', component: TruckManagersPageComponent},
+  {path: 'truck-manager/invoices', component: TruckInvoicesComponent},
   {path: 'invoice', component: InvoiceComponent},
   {path: 'invoice/create', component: InvoiceUpdateComponent},
   {path: 'parking-manager', component: ParkingManagerProfileComponent},
   {path: 'parking-manager/update', component: UpdateProfileComponent},
   {path: 'parking-place/:id', component: ParkingPlaceComponent},
   {path: 'parking-place/update/:id', component: ParkingPlaceUpdateComponent},
-  {path: 'parking-place/create', component: ParkingPlaceUpdateComponent},
-  {path: 'parking-manager/invoices', component: ParkingManagerInvoicesComponent}
+  {path: 'parking-place/create/new', component: ParkingPlaceUpdateComponent},
+  {path: 'parking-manager/invoices', component: ParkingInvoicesComponent}
 ];
 
 @NgModule({

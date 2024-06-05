@@ -83,7 +83,7 @@ export class ParkingManagerService {
       this.httpOptions).toPromise();
   }
 
-  async getPlace(placeId: bigint) {
+  async getPlace(placeId: number) {
     await this.getCredentials()
 
     return await this.http.get<ParkingPlaceDTO>(
@@ -99,7 +99,7 @@ export class ParkingManagerService {
       this.httpOptions).toPromise();
   }
 
-  async updatePlace(placeId: bigint, placeRequest: UpdatePlaceRequest) {
+  async updatePlace(placeId: number, placeRequest: UpdatePlaceRequest) {
     await this.getCredentials()
 
     return await this.http.patch<ParkingPlaceDTO>(

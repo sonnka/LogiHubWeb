@@ -78,7 +78,7 @@ export class ParkingManagerProfileComponent {
   }
 
   protected async createPlace() {
-    await this.router.navigate(['/parking-place/create']);
+    await this.router.navigate(['/parking-place/create/new']);
   }
 
   private async getManagerProfile() {

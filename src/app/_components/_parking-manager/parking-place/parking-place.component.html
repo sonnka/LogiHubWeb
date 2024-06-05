@@ -1,1 +1,54 @@
-<p>parking-place works!</p>
+<br><br>
+<h5 style="text-align: center">Parking place</h5>
+<br>
+<div>
+  <button (click)="updatePlaceByIot()"
+          class="my-btn">Get updated data
+  </button>
+</div>
+<br>
+<div style="width: 600px">
+  <div>
+    <label>Place number:</label> {{ place?.placeNumber || '' }}
+  </div>
+  <div>
+    <label>Address:</label> {{ place?.address || '' }}
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-6">
+      <label>Min width:</label> {{ place?.minWidth | number: '1.2-2' }}
+    </div>
+    <div class="col-6">
+      <label>Max width:</label> {{ place?.maxWidth | number: '1.2-2' }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <label>Min length:</label> {{ place?.minLength | number: '1.2-2' }}
+    </div>
+    <div class="col-6">
+      <label>Max length:</label> {{ place?.maxLength | number: '1.2-2' }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <label>Min height:</label> {{ place?.minHeight | number: '1.2-2' }}
+    </div>
+    <div class="col-6">
+      <label>Max height:</label> {{ place?.maxHeight | number: '1.2-2' }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <label>Min weight:</label> {{ place?.minWeight | number: '1.2-2' }}
+    </div>
+    <div class="col-6">
+      <label>Max weight:</label> {{ place?.maxWeight | number: '1.2-2' }}
+    </div>
+  </div>
+  <hr>
+  <div>
+    <label>Hourly pay:</label> {{ place?.hourlyPay | number: '1.2-2' }}
+  </div>
+</div>
