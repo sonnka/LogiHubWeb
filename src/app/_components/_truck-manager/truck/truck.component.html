@@ -1,1 +1,27 @@
-<p>truck works!</p>
+<br><br>
+<h5 style="text-align: center">Truck</h5>
+<br>
+<div>
+  <button (click)="updateTruckByIot()"
+          class="my-btn">Get updated data
+  </button>
+</div>
+<br>
+<div style="width: 600px">
+  <div>
+    <label>Number:</label> {{ truck?.number || '' }}
+  </div>
+  <hr>
+  <div>
+    <label>Width:</label> {{ truck?.width | number: '1.2-2' }}
+  </div>
+  <div>
+    <label>Length:</label> {{ truck?.length | number: '1.2-2' }}
+  </div>
+  <div>
+    <label>Height:</label> {{ truck?.height | number: '1.2-2' }}
+  </div>
+  <div>
+    <label>Weight:</label> {{ truck?.weight | number: '1.2-2' }}
+  </div>
+</div>
