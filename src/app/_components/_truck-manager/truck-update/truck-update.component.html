@@ -1,1 +1,72 @@
-<p>truck-update works!</p>
+<br><br>
+<h5 style="text-align: center">Truck</h5>
+<br><br>
+<div *ngIf="isNew()" style="width: 700px">
+  <div>
+    <label>Number:
+      <input #number placeholder="Number" type="text">
+    </label>
+  </div>
+  <hr>
+  <div>
+    <label>Width:
+      <input #width placeholder="Width" type="number">
+    </label>
+  </div>
+  <div>
+    <label>Length:
+      <input #length placeholder="Length" type="number">
+    </label>
+  </div>
+  <div>
+    <label>Height:
+      <input #height placeholder="Height" type="number">
+    </label>
+  </div>
+  <div>
+    <label>Weight:
+      <input #weight placeholder="Weight" type="number">
+    </label>
+  </div>
+
+  <br>
+  <div style="text-align: center">
+    <button (click)="createTruck(number.value, width.value, length.value, height.value, weight.value)"
+            class="my-btn">Create
+    </button>
+  </div>
+</div>
+
+
+<div *ngIf="!isNew()" style="width: 700px">
+  <div>
+    <label>Width:
+      <input #width placeholder="Width" type="number"
+             value="{{truck?.width | number: '1.2-2'}}">
+    </label>
+  </div>
+  <div>
+    <label>Length:
+      <input #length placeholder="Length" type="number"
+             value="{{truck?.length | number: '1.2-2'}}">
+    </label>
+  </div>
+  <div>
+    <label>Height:
+      <input #height placeholder="Height" type="number"
+             value="{{truck?.height | number: '1.2-2'}}">
+    </label>
+  </div>
+  <div>
+    <label>Weight:
+      <input #weight placeholder="Weight" type="number"
+             value="{{truck?.weight | number: '1.2-2'}}">
+    </label>
+  </div>
+  <br>
+  <div style="text-align: center">
+    <button (click)="updateTruck(width.value, length.value, height.value, weight.value)"
+            class="my-btn">Update
+    </button>
+  </div>
+</div>
