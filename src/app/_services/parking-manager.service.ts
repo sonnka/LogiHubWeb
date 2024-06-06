@@ -75,14 +75,6 @@ export class ParkingManagerService {
       this.httpOptions).toPromise();
   }
 
-  async getPlacesWithoutCompany() {
-    await this.getCredentials()
-
-    return await this.http.get<PaginatedResponse<ShortParkingPlaceDTO>>(
-      this.baseUrl + '/parking-manager/' + this.id + '/parking-places/without-manager',
-      this.httpOptions).toPromise();
-  }
-
   async getPlace(placeId: number) {
     await this.getCredentials()
 
