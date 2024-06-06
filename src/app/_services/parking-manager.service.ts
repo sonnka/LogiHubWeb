@@ -186,8 +186,7 @@ export class ParkingManagerService {
         Accept: "application/pdf",
         'Authorization': 'Bearer ' + this.token
       }),
-      responseType: 'arraybuffer' as const,
-      withCredentials: true
+      responseType: 'arraybuffer' as const
     };
 
     return this.http.get(

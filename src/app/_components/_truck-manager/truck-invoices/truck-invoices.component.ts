@@ -27,7 +27,7 @@ export class TruckInvoicesComponent {
   }
 
   protected async openInvoice(invoiceId: bigint) {
-    await this.router.navigate(['/invoice', invoiceId]);
+    await this.router.navigate(['/truck-manager/invoice', invoiceId]);
   }
 
   protected async createInvoice() {

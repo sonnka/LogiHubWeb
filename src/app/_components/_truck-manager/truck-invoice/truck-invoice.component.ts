@@ -1,19 +1,19 @@
 import {Component} from '@angular/core';
-import {ParkingManagerService} from "../../../_services/parking-manager.service";
-import {ActivatedRoute, Router} from "@angular/router";
-import {UtilService} from "../../../_services/util.service";
 import {InvoiceDTO} from "../../../_models/response/invoice-dto";
+import {ActivatedRoute, Router} from "@angular/router";
+import {UtilService} from '../../../_services/util.service';
+import {TruckManagerService} from "../../../_services/truck-manager.service";
 
 @Component({
-  selector: 'app-invoice',
-  templateUrl: './invoice.component.html',
-  styleUrl: './invoice.component.css'
+  selector: 'app-truck-invoice',
+  templateUrl: './truck-invoice.component.html',
+  styleUrl: './truck-invoice.component.css'
 })
-export class InvoiceComponent {
+export class TruckInvoiceComponent {
   protected invoice: InvoiceDTO | undefined;
   protected readonly UtilService = UtilService;
 
-  constructor(private parkingManagerService: ParkingManagerService, private router: Router, private route: ActivatedRoute) {
+  constructor(private truckManagerService: TruckManagerService, private router: Router, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
@@ -23,7 +23,7 @@ export class InvoiceComponent {
 
   protected async signInvoice(id: bigint) {
     try {
-      await this.parkingManagerService.signInvoice(id);
+      await this.truckManagerService.signInvoice(id);
     } catch (error) {
       UtilService.displayError(error, this.router)
     }
@@ -32,7 +32,7 @@ export class InvoiceComponent {
 
   protected async exportInvoice(id: bigint) {
     try {
-      await this.parkingManagerService.generateInvoice(id).then(res => {
+      await this.truckManagerService.generateInvoice(id).then(res => {
           res.subscribe(
             response => {
               const file = new Blob([response], {type: "application/pdf"});
@@ -52,7 +52,7 @@ export class InvoiceComponent {
 
   private async getInvoice(id: number) {
     try {
-      this.invoice = await this.parkingManagerService.getInvoice(id);
+      this.invoice = await this.truckManagerService.getInvoice(id);
     } catch (error) {
       UtilService.displayError(error, this.router)
     }

@@ -28,7 +28,7 @@ export class ParkingInvoicesComponent {
   }
 
   protected async openInvoice(invoiceId: bigint) {
-    await this.router.navigate(['/invoice', invoiceId]);
+    await this.router.navigate(['/parking-manager/invoice', invoiceId]);
   }
 
 

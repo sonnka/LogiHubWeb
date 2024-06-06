@@ -22,9 +22,10 @@ import {
   ParkingPlaceUpdateComponent
 } from "./_components/_parking-manager/parking-place-update/parking-place-update.component";
 import {UpdateProfileComponent} from "./_components/_general/update-profile/update-profile.component";
-import {InvoiceComponent} from "./_components/_truck-manager/invoice/invoice.component";
+import {ParkingInvoiceComponent} from "./_components/_parking-manager/parking-invoice/parking-invoice.component";
 import {TruckInvoicesComponent} from "./_components/_truck-manager/truck-invoices/truck-invoices.component";
 import {ParkingInvoicesComponent} from "./_components/_parking-manager/parking-invoices/parking-invoices.component";
+import {TruckInvoiceComponent} from "./_components/_truck-manager/truck-invoice/truck-invoice.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -41,7 +42,8 @@ const routes: Routes = [
   {path: 'truck/update/:id', component: TruckUpdateComponent},
   {path: 'truck/create/new', component: TruckUpdateComponent},
   {path: 'truck-manager/invoices', component: TruckInvoicesComponent},
-  {path: 'invoice/:id', component: InvoiceComponent},
+  {path: 'truck-manager/invoice/:id', component: TruckInvoiceComponent},
+  {path: 'parking-manager/invoice/:id', component: ParkingInvoiceComponent},
   {path: 'invoice/create/new', component: InvoiceUpdateComponent},
   {path: 'parking-manager', component: ParkingManagerProfileComponent},
   {path: 'parking-manager/update', component: UpdateProfileComponent},

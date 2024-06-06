@@ -37,7 +37,8 @@ import {
 import {InvoiceUpdateComponent} from './_components/_truck-manager/invoice-update/invoice-update.component';
 import {TruckInvoicesComponent} from './_components/_truck-manager/truck-invoices/truck-invoices.component';
 import {ParkingInvoicesComponent} from './_components/_parking-manager/parking-invoices/parking-invoices.component';
-import {InvoiceComponent} from './_components/_truck-manager/invoice/invoice.component';
+import {ParkingInvoiceComponent} from './_components/_parking-manager/parking-invoice/parking-invoice.component';
+import {TruckInvoiceComponent} from './_components/_truck-manager/truck-invoice/truck-invoice.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import {InvoiceComponent} from './_components/_truck-manager/invoice/invoice.com
     InvoiceUpdateComponent,
     TruckInvoicesComponent,
     ParkingInvoicesComponent,
-    InvoiceComponent
+    ParkingInvoiceComponent,
+    TruckInvoiceComponent
   ],
   imports: [
     BrowserModule,
