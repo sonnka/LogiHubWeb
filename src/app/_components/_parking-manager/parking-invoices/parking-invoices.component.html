@@ -1,5 +1,5 @@
 <br><br>
-<div class="container" style="width: 900px">
+<div class="container" style="width: 1050px">
   <p style="font-size: 15px">Last update: {{ UtilService.getTodayDate() || '00.00.0000 00:00' }} </p>
   <div>
     <h6 style="margin-top: 40px; margin-bottom: 30px; text-align: center;">Invoices</h6>
@@ -29,7 +29,7 @@
   <table border="1" class="table table-condensed table-responsive-md" style="font-size: 14px">
     <thead>
     <tr>
-      <th style="width:10%">
+      <th style="width:15%">
         <a>Type</a>
       </th>
       <th style="width:15%">
@@ -38,7 +38,7 @@
       <th style="width:15%">
         <a>Place number</a>
       </th>
-      <th style="width:20%">
+      <th style="width:15%">
         <a>Truck manager email</a>
       </th>
       <th style="width:20%">
@@ -54,12 +54,12 @@
     </thead>
     <tbody *ngFor="let invoice of invoices?.content">
     <tr>
-      <td>{{ invoice.type }}</td>
+      <td>{{ invoice.type.replace("_", " ").toLowerCase() }}</td>
       <td>{{ invoice.truckNumber }}</td>
       <td>{{ invoice.placeNumber }}</td>
       <td>{{ invoice.truckManagerEmail }}</td>
-      <td>{{ invoice.creationDate }}</td>
-      <td>{{ invoice.price }}</td>
+      <td>{{ UtilService.formatDateTime(invoice.creationDate) }}</td>
+      <td>{{ invoice.price | number: '1.2-2' }}</td>
       <td class="actions" data-th="">
         <a (click)="openInvoice(invoice.id)" title="more info" type="button">
           <i class="material-icons blue">&#xe88e;</i></a>&emsp;

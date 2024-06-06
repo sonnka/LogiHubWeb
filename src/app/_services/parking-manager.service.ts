@@ -130,7 +130,7 @@ export class ParkingManagerService {
       this.httpOptions).toPromise();
   }
 
-  async getInvoice(invoiceId: bigint) {
+  async getInvoice(invoiceId: number) {
     await this.getCredentials();
 
     return await this.http.get<InvoiceDTO>(
