@@ -5,6 +5,8 @@
     <h6 style="margin-top: 40px; margin-bottom: 30px; text-align: center;">Invoices</h6>
   </div>
   <br>
+  <button (click)="createInvoice()" class="my-btn-2">Create new invoice</button>
+  <br><br>
   <div style="margin-left: 30px">
     <button (click)="getAllInvoices()" class="btn-choice selected" id="1btn">All</button>
     <button (click)="getNotSignedByParkInvoices()" class="btn-choice" id="2btn" style="margin-left: 10px">Not signed by
@@ -25,6 +27,7 @@
     <button (click)="search(truckNumber.value)" class="my-btn-search">Search</button>
     <button (click)="clear()" class="my-btn-clear">Clear</button>
   </div>
+  <br>
   <br>
   <table border="1" class="table table-condensed table-responsive-md" style="font-size: 14px">
     <thead>

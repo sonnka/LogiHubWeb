@@ -90,7 +90,7 @@
   {{ UtilService.formatDateTime(invoice?.signedByTruckManagerDate) || '' }}
   )
 </div>
-<div *ngIf="!invoice?.signedByTruckManager" style="text-align: center;">
+<div *ngIf="!invoice?.signedByTruckManager && invoice?.signedByParkingManager" style="text-align: center;">
   <button (click)="signInvoice(invoice?.id!)"
           class="my-btn">Sign
   </button>

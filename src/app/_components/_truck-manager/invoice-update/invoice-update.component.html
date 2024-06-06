@@ -1,1 +1,68 @@
-<p>invoice-update works!</p>
+<div>
+  <br><br>
+  <h5 style="text-align: center">Invoice</h5>
+  <br><br>
+  <div style="width: 800px;">
+    <form (ngSubmit)="onSubmit()" [formGroup]="invoiceForm">
+      <div>
+        <div>
+          <label>Truck number:
+            <input formControlName="truckNumber" placeholder="Truck number" type="text">
+          </label>
+        </div>
+        <div>
+          <label>Place number:
+            <input formControlName="placeNumber" placeholder="Place number" type="text">
+          </label>
+        </div>
+        <div>
+          <label>Description:
+            <input formControlName="description" placeholder="Description" type="text">
+          </label>
+        </div>
+        <table border="1" class="table table-condensed table-responsive-md" style="font-size: 14px">
+          <thead>
+          <tr>
+            <th style="width:30%">Name</th>
+            <th style="width:20%">Weight</th>
+            <th style="width:20%">Price</th>
+            <th style="width:20%">Amount</th>
+            <th style="width:10%">Actions</th>
+          </tr>
+          </thead>
+          <tbody formArrayName="items">
+          <tr *ngFor="let item of items.controls; let i = index" [formGroupName]="i">
+            <td>
+              <input formControlName="name" placeholder="Name" type="text">
+            </td>
+            <td>
+              <input formControlName="weight" placeholder="Weight" step="0.01" type="number">
+            </td>
+            <td>
+              <input formControlName="price" placeholder="Price" step="0.01" type="number">
+            </td>
+            <td>
+              <input formControlName="amount" placeholder="Amount" step="0.01" type="number">
+            </td>
+            <td>
+              <button (click)="removeItem(i)" type="button">
+                <i class="material-icons red">remove_circle</i>
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+        <div style="text-align: right; margin-top: 10px;">
+          <button (click)="addItem()" type="button">
+            <i class="material-icons green">add_circle</i>
+          </button>
+        </div>
+
+        <br>
+        <div style="text-align: center">
+          <button class="my-btn" type="submit">Create</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
