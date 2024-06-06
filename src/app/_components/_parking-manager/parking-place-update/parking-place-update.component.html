@@ -1,26 +1,26 @@
 <br><br>
-<h5 style="text-align: center">Parking place</h5>
+<h5 style="text-align: center">{{ 'msg91' | translate }}</h5>
 <br><br>
 <div *ngIf="isNew()" style="width: 700px">
   <div>
-    <label>Place number:
+    <label>{{ 'msg98' | translate }}:
       <input #placeNumber placeholder="Place number" type="text">
     </label>
   </div>
   <div>
-    <label>Address:
+    <label>{{ 'msg99' | translate }}:
       <input #address placeholder="Address" type="text">
     </label>
   </div>
   <hr>
   <div class="row">
     <div class="col-6">
-      <label>Min width:
+      <label>{{ 'msg100' | translate }}:
         <input #minWidth placeholder="Min width" type="number">
       </label>
     </div>
     <div class="col-6">
-      <label>Max width:
+      <label>{{ 'msg101' | translate }}:
         <input #maxWidth placeholder="Max width" type="number">
       </label>
     </div>
@@ -28,12 +28,12 @@
   <hr>
   <div class="row">
     <div class="col-6">
-      <label>Min length:
+      <label>{{ 'msg102' | translate }}:
         <input #minLength placeholder="Min length" type="number">
       </label>
     </div>
     <div class="col-6">
-      <label>Max length:
+      <label>{{ 'msg103' | translate }}:
         <input #maxLength placeholder="Max length" type="number">
       </label>
     </div>
@@ -41,12 +41,12 @@
   <hr>
   <div class="row">
     <div class="col-6">
-      <label>Min height:
+      <label>{{ 'msg104' | translate }}:
         <input #minHeight placeholder="Min height" type="number">
       </label>
     </div>
     <div class="col-6">
-      <label>Max height:
+      <label>{{ 'msg105' | translate }}:
         <input #maxHeight placeholder="Max height" type="number">
       </label>
     </div>
@@ -54,19 +54,19 @@
   <hr>
   <div class="row">
     <div class="col-6">
-      <label>Min weight:
+      <label>{{ 'msg106' | translate }}:
         <input #minWeight placeholder="Min weight" type="number">
       </label>
     </div>
     <div class="col-6">
-      <label>Max weight:
+      <label>{{ 'msg107' | translate }}:
         <input #maxWeight placeholder="Max weight" type="number">
       </label>
     </div>
   </div>
   <hr>
   <div>
-    <label>Hourly pay:
+    <label>{{ 'msg108' | translate }}:
       <input #hourlyPay placeholder="Hourly pay" type="number">
     </label>
   </div>
@@ -75,7 +75,7 @@
     <button (click)="createPlace(placeNumber.value, address.value, minWidth.value, maxWidth.value,
     minLength.value, maxLength.value, minHeight.value, maxHeight.value, minWeight.value, maxWeight.value,
     hourlyPay.value)"
-            class="my-btn">Create
+            class="my-btn">{{ 'msg109' | translate }}
     </button>
   </div>
 </div>
@@ -84,13 +84,13 @@
 <div *ngIf="!isNew()" style="width: 700px">
   <div class="row">
     <div class="col-6">
-      <label>Min width:
+      <label>{{ 'msg100' | translate }}:
         <input #minWidth placeholder="Min width" type="number"
                value="{{place?.minWidth | number: '1.2-2'}}">
       </label>
     </div>
     <div class="col-6">
-      <label>Max width:
+      <label>{{ 'msg101' | translate }}:
         <input #maxWidth placeholder="Max width" type="number"
                value="{{place?.maxWidth | number: '1.2-2'}}">
       </label>
@@ -99,13 +99,13 @@
   <hr>
   <div class="row">
     <div class="col-6">
-      <label>Min length:
+      <label>{{ 'msg102' | translate }}:
         <input #minLength placeholder="Min length" type="number"
                value="{{place?.minLength | number: '1.2-2'}}">
       </label>
     </div>
     <div class="col-6">
-      <label>Max length:
+      <label>{{ 'msg103' | translate }}:
         <input #maxLength placeholder="Max length" type="number"
                value="{{place?.maxLength | number: '1.2-2'}}">
       </label>
@@ -114,13 +114,13 @@
   <hr>
   <div class="row">
     <div class="col-6">
-      <label>Min height:
+      <label>{{ 'msg104' | translate }}:
         <input #minHeight placeholder="Min height" type="number"
                value="{{place?.minHeight | number: '1.2-2'}}">
       </label>
     </div>
     <div class="col-6">
-      <label>Max height:
+      <label>{{ 'msg105' | translate }}:
         <input #maxHeight placeholder="Max height" type="number"
                value="{{place?.maxHeight | number: '1.2-2'}}">
       </label>
@@ -129,13 +129,13 @@
   <hr>
   <div class="row">
     <div class="col-6">
-      <label>Min weight:
+      <label>{{ 'msg106' | translate }}:
         <input #minWeight placeholder="Min weight" type="number"
                value="{{place?.minWeight | number: '1.2-2'}}">
       </label>
     </div>
     <div class="col-6">
-      <label>Max weight:
+      <label>{{ 'msg107' | translate }}:
         <input #maxWeight placeholder="Max weight" type="number"
                value="{{place?.maxWeight | number: '1.2-2'}}">
       </label>
@@ -143,7 +143,7 @@
   </div>
   <hr>
   <div>
-    <label>Hourly pay:
+    <label>{{ 'msg108' | translate }}:
       <input #hourlyPay placeholder="Hourly pay" type="number"
              value="{{place?.hourlyPay | number: '1.2-2'}}">
     </label>
@@ -153,7 +153,7 @@
     <button (click)="updatePlace(minWidth.value, maxWidth.value,
     minLength.value, maxLength.value, minHeight.value, maxHeight.value, minWeight.value, maxWeight.value,
     hourlyPay.value)"
-            class="my-btn">Update
+            class="my-btn">{{ 'msg49' | translate }}
     </button>
   </div>
 </div>

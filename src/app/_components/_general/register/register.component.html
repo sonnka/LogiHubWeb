@@ -1,36 +1,36 @@
 <br><br>
 <div style="text-align: center;">
-  <h5>Creating new account</h5>
+  <h5>{{ 'msg43' | translate }}</h5>
 </div>
 <div id="registerRole" style="text-align: center; margin-top: 75px; display: block;">
   <div>
-    <h6>Register as</h6>
+    <h6>{{ 'msg44' | translate }}</h6>
   </div>
   <div>
-    <input (click)="registerTruckManager()" type="button" value="Truck manager">
+    <input (click)="registerTruckManager()" [value]="'msg45' | translate" type="button">
   </div>
   <div>
-    <input (click)="registerParkingManager()" type="button" value="Parking manager">
+    <input (click)="registerParkingManager()" [value]="'msg46' | translate" type="button">
   </div>
 </div>
 <br>
 <div id="registerForm" style="text-align: center; display: none">
   <div class="row">
     <div>
-      <input #firstName id="firstName" placeholder="First name" type="text">
+      <input #firstName [placeholder]="'msg15' | translate" id="firstName" type="text">
     </div>
     <div>
-      <input #lastName id="lastName" placeholder="Last name" type="text">
+      <input #lastName [placeholder]="'msg16' | translate" id="lastName" type="text">
     </div>
     <div>
-      <input #email id="email" placeholder="Email" type="email">
+      <input #email [placeholder]="'msg34' | translate" id="email" type="email">
     </div>
     <div>
-      <input #password id="password" placeholder="Password" type="password">
+      <input #password [placeholder]="'msg42' | translate" id="password" type="password">
     </div>
     <div>
-      <input (focus)="openAutocomplete()" [formControl]="dataControl" [matAutocomplete]="auto" matInput
-             placeholder="Choose a company"
+      <input (focus)="openAutocomplete()" [formControl]="dataControl" [matAutocomplete]="auto" [placeholder]="'msg47' | translate"
+             matInput
              type="text">
       <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onOptionSelected($event.option.value)"
                         [displayWith]="displayFn">
@@ -43,6 +43,6 @@
   <br> <br>
   <div>
     <input (click)="register(firstName.value, lastName.value, email.value, password.value)"
-           type="button" value="Register">
+           [value]="'msg48' | translate" type="button">
   </div>
 </div>

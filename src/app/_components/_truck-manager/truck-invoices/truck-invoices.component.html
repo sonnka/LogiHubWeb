@@ -1,31 +1,33 @@
 <br><br>
 <div class="container" style="width: 1050px">
-  <p style="font-size: 15px">Last update: {{ UtilService.getTodayDate() || '00.00.0000 00:00' }} </p>
+  <p style="font-size: 15px">{{ 'msg71' | translate }}: {{ UtilService.getTodayDate() || '00.00.0000 00:00' }} </p>
   <div>
-    <h6 style="margin-top: 40px; margin-bottom: 30px; text-align: center;">Invoices</h6>
+    <h6 style="margin-top: 40px; margin-bottom: 30px; text-align: center;">{{ 'msg72' | translate }}</h6>
   </div>
   <br>
-  <button (click)="createInvoice()" class="my-btn-2">Create new invoice</button>
+  <button (click)="createInvoice()" class="my-btn-2">{{ 'msg117' | translate }}</button>
   <br><br>
   <div style="margin-left: 30px">
-    <button (click)="getAllInvoices()" class="btn-choice selected" id="1btn">All</button>
-    <button (click)="getNotSignedByParkInvoices()" class="btn-choice" id="2btn" style="margin-left: 10px">Not signed by
-      parking manager
+    <button (click)="getAllInvoices()" class="btn-choice selected" id="1btn">{{ 'msg73' | translate }}</button>
+    <button (click)="getNotSignedByParkInvoices()" class="btn-choice" id="2btn"
+            style="margin-left: 10px">{{ 'msg74' | translate }}
     </button>
-    <button (click)="getNotSignedByTrInvoices()" class="btn-choice" id="3btn" style="margin-left: 10px">Not signed by
-      truck manager
+    <button (click)="getNotSignedByTrInvoices()" class="btn-choice" id="3btn"
+            style="margin-left: 10px">{{ 'msg75' | translate }}
     </button>
-    <button (click)="getSignedInvoices()" class="btn-choice" id="4btn" style="margin-left: 10px">Signed</button>
+    <button (click)="getSignedInvoices()" class="btn-choice" id="4btn"
+            style="margin-left: 10px">{{ 'msg76' | translate }}
+    </button>
   </div>
   <br>
   <div id="dateFilter" style="margin-left: 40px; display: block">
     <label for="placeNumber" style="margin-left: 10px; font-weight: bold; font-size: 17px">
-      Truck number:
+      {{ 'msg118' | translate }}:
     </label>
     <input #truckNumber id="placeNumber" name="placeNumber" style="margin-left: 10px; margin-right: 10px" type="text"/>
 
-    <button (click)="search(truckNumber.value)" class="my-btn-search">Search</button>
-    <button (click)="clear()" class="my-btn-clear">Clear</button>
+    <button (click)="search(truckNumber.value)" class="my-btn-search">{{ 'msg78' | translate }}</button>
+    <button (click)="clear()" class="my-btn-clear">{{ 'msg79' | translate }}</button>
   </div>
   <br>
   <br>
@@ -33,25 +35,25 @@
     <thead>
     <tr>
       <th style="width:15%">
-        <a>Type</a>
+        <a>{{ 'msg80' | translate }}</a>
       </th>
       <th style="width:15%">
-        <a>Truck number</a>
+        <a>{{ 'msg81' | translate }}</a>
       </th>
       <th style="width:15%">
-        <a>Place number</a>
+        <a>{{ 'msg82' | translate }}</a>
       </th>
       <th style="width:15%">
-        <a>Truck manager email</a>
+        <a>{{ 'msg83' | translate }}</a>
       </th>
       <th style="width:20%">
-        <a>Creation date</a>
+        <a>{{ 'msg84' | translate }}</a>
       </th>
       <th style="width:10%">
-        <a>Price</a>
+        <a>{{ 'msg85' | translate }}</a>
       </th>
       <th style="width:10%">
-        <a>Actions</a>
+        <a>{{ 'msg86' | translate }}</a>
       </th>
     </tr>
     </thead>

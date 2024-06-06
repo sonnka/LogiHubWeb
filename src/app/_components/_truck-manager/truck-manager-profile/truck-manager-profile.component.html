@@ -30,20 +30,20 @@
     <div class="col-6">
       <a href="/truck-manager/update" style="color: #696e6e; font-style: italic; cursor: pointer">
         <i class="fa fa-edit" style="font-size:24px"></i>
-        Edit profile</a>
+        {{ 'msg87' | translate }}</a>
     </div>
     <div class="col-6 text-end">
       <a (click)="showPopup()" style="color: #cb0606; font-style: italic; cursor: pointer;">
         <i class="fa fa-trash" style="font-size:24px"></i>
-        Delete profile</a>
+        {{ 'msg88' | translate }}</a>
     </div>
     <div class="overlay" id="popup" style="display: none">
       <div class="popup">
-        <p>Do you really want to delete your account?</p>
+        <p>{{ 'msg89' | translate }}</p>
         <div class="text-right">
-          <button (click)="hidePopup()" class="btn btn-cancel">Cancel</button>
+          <button (click)="hidePopup()" class="btn btn-cancel">{{ 'msg37' | translate }}</button>
           <button (click)="deleteProfile()" class="btn btn-primary"
-                  style="background: #cb1a2b; border-color: #cb1a2b">Ok
+                  style="background: #cb1a2b; border-color: #cb1a2b">{{ 'msg38' | translate }}
           </button>
         </div>
       </div>
@@ -52,23 +52,23 @@
   <br>
 </div>
 <br>
-<button (click)="createTruck()" class="my-btn">Add new truck</button>
+<button (click)="createTruck()" class="my-btn">{{ 'msg119' | translate }}</button>
 <br>
 <p style="margin-top: 60px; margin-bottom: 15px; color: #1cbebe; font-style: italic;">
-  Trucks
+  {{ 'msg120' | translate }}
 </p>
 <div class="row">
   <table border="1" class="table table-condensed table-responsive-md" style="font-size: 14px">
     <thead>
     <tr>
       <th style="width:30%">
-        <a>Number</a>
+        <a>{{ 'msg112' | translate }}</a>
       </th>
       <th style="width:40%">
-        <a>Truck manager email</a>
+        <a>{{ 'msg83' | translate }}</a>
       </th>
       <th style="width:30%">
-        <a>Actions</a>
+        <a>{{ 'msg86' | translate }}</a>
       </th>
     </tr>
     </thead>

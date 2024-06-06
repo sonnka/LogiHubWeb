@@ -32,6 +32,11 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
+                "glob": "**/*.json",
+                "input": "src/assets/i18n",
+                "output": "/assets/i18n/"
+              },
+              {
                 "glob": "**/*",
                 "input": "public"
               }

@@ -21,29 +21,29 @@
   </div>
   <br>
   <div class="float-right">
-    <input #email placeholder="Enter email" style="margin-bottom: 35px" type="email">
-    <button (click)="addAdmin(email.value)" class="my-btn">Add new admin</button>
+    <input #email [placeholder]="'msg1' | translate" style="margin-bottom: 35px" type="email">
+    <button (click)="addAdmin(email.value)" class="my-btn">{{ 'msg2' | translate }}</button>
   </div>
   <div *ngIf="LoginService.isChiefAdmin()" class="float-right" style="margin-right: 50px">
-    <input #host placeholder="Enter host of backend for iot" type="text">
-    <button (click)="connect(host.value)" class="my-btn">Connect iot</button>
+    <input #host [placeholder]="'msg3' | translate" type="text">
+    <button (click)="connect(host.value)" class="my-btn">{{ 'msg4' | translate }}</button>
   </div>
   <br>
-  <p style="margin-top: 90px; color: #1cbebe; font-style: italic;">Not approved admins</p>
+  <p style="margin-top: 90px; color: #1cbebe; font-style: italic;">{{ 'msg5' | translate }}</p>
   <table border="1" class="table table-condensed table-responsive-md" style="width: 100%">
     <thead>
     <tr>
       <th style="width:30%">
-        <a>Admin email</a>
+        <a>{{ 'msg6' | translate }}</a>
       </th>
       <th style="width:25%">
-        <a>Date of adding</a>
+        <a>{{ 'msg7' | translate }}</a>
       </th>
       <th style="width:30%">
-        <a>Added by</a>
+        <a>{{ 'msg8' | translate }}</a>
       </th>
       <th *ngIf="LoginService.isChiefAdmin()" style="width:15%">
-        <a>Actions</a>
+        <a>{{ 'msg9' | translate }}</a>
       </th>
     </tr>
     </thead>
@@ -61,20 +61,20 @@
     </tr>
     </tbody>
   </table>
-  <p style="margin-top: 80px; color: #1cbebe; font-style: italic">Approved admins</p>
+  <p style="margin-top: 80px; color: #1cbebe; font-style: italic">{{ 'msg10' | translate }}</p>
   <table border="1" class="table table-condensed table-responsive-md" style="width: 100%">
     <thead>
     <tr>
       <th style="width:15%">
       </th>
       <th style="width:30%">
-        <a>Admin fullname</a>
+        <a>{{ 'msg11' | translate }}</a>
       </th>
       <th style="width:30%">
-        <a>Admin email</a>
+        <a>{{ 'msg12' | translate }}</a>
       </th>
       <th style="width:25%">
-        <a>Date of approving</a>
+        <a>{{ 'msg13' | translate }}</a>
       </th>
     </tr>
     </thead>

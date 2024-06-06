@@ -1,9 +1,9 @@
 <div class="container" style="width: 850px">
-  <p style="margin-top: 30px; margin-bottom: 30px; font-style: italic; font-size: 13px; color: gray">Export/Import
-    database</p>
+  <p
+    style="margin-top: 30px; margin-bottom: 30px; font-style: italic; font-size: 13px; color: gray">{{ 'msg21' | translate }}</p>
   <div class="row">
     <div class="col-6">
-      <button (click)="exportDatabase()" class="my-btn">Export database</button>
+      <button (click)="exportDatabase()" class="my-btn">{{ 'msg22' | translate }}</button>
     </div>
     <div class="col-6 float-right">
       <div class="row">
@@ -19,35 +19,35 @@
           </div>
         </div>
         <div class="col-6">
-          <button (click)="importDatabase()" class="my-btn">Import database</button>
+          <button (click)="importDatabase()" class="my-btn">{{ 'msg23' | translate }}</button>
         </div>
       </div>
     </div>
   </div>
   <hr>
   <p style="margin-top: 30px; margin-bottom: 30px; font-style: italic; font-size: 13px; color: gray">
-    Generate week/month reports
+    {{ 'msg24' | translate }}
   </p>
-  <button (click)="generateWeekDatabaseReport()" class="my-btn">Generate week report</button>
-  <button (click)="generateMonthDatabaseReport()" class="my-btn">Generate month report</button>
+  <button (click)="generateWeekDatabaseReport()" class="my-btn">{{ 'msg25' | translate }}</button>
+  <button (click)="generateMonthDatabaseReport()" class="my-btn">{{ 'msg26' | translate }}</button>
 
-  <p style="margin-top: 50px; color: #1cbebe; font-style: italic">History of database operations</p>
+  <p style="margin-top: 50px; color: #1cbebe; font-style: italic">{{ 'msg27' | translate }}</p>
   <p style="margin-top: 30px; font-style: italic; font-size: 13px; color: gray">
     {{ startOfCurrentWeek + ' - ' + endOfCurrentWeek }}</p>
   <table border="1" class="table table-condensed table-responsive-md" style="width: 100%; font-size: 15px">
     <thead>
     <tr>
       <th style="width:30%">
-        <a>Admin email</a>
+        <a>{{ 'msg28' | translate }}</a>
       </th>
       <th style="width:25%">
-        <a>Date</a>
+        <a>{{ 'msg29' | translate }}</a>
       </th>
       <th style="width:25%">
-        <a>Time</a>
+        <a>{{ 'msg30' | translate }}</a>
       </th>
       <th style="width:20%">
-        <a>Operation</a>
+        <a>{{ 'msg31' | translate }}</a>
       </th>
     </tr>
     </thead>

@@ -2,7 +2,7 @@
 <div class="container" style="width: 850px">
   <p style="font-size: 15px">Last update: {{ UtilService.getTodayDate() || '00.00.0000 00:00' }} </p>
   <div>
-    <h6 style="margin-top: 40px; margin-bottom: 30px; text-align: center;">Parking managers</h6>
+    <h6 style="margin-top: 40px; margin-bottom: 30px; text-align: center;">{{ 'msg32' | translate }}</h6>
   </div>
   <br>
   <table border="1" class="table table-condensed table-responsive-md" style="font-size: 15px">
@@ -11,13 +11,13 @@
       <th style="width:10%">
       </th>
       <th style="width:40%">
-        <a>Fullname</a>
+        <a>{{ 'msg33' | translate }}</a>
       </th>
       <th style="width:30%">
-        <a>Email</a>
+        <a>{{ 'msg34' | translate }}</a>
       </th>
       <th style="width:20%">
-        <a>Actions</a>
+        <a>{{ 'msg35' | translate }}</a>
       </th>
     </tr>
     </thead>
@@ -37,11 +37,11 @@
 </div>
 <div class="overlay" id="popup" style="display: none">
   <div class="popup">
-    <p>Do you really want to delete parking manager account?</p>
+    <p>{{ 'msg36' | translate }}</p>
     <div class="text-right">
-      <button (click)="hidePopup()" class="btn btn-cancel">Cancel</button>
+      <button (click)="hidePopup()" class="btn btn-cancel">{{ 'msg37' | translate }}</button>
       <button (click)="deleteManager()" class="btn btn-primary"
-              style="background: #cb1a2b; border-color: #cb1a2b">Ok
+              style="background: #cb1a2b; border-color: #cb1a2b">{{ 'msg38' | translate }}
       </button>
     </div>
   </div>

@@ -8,7 +8,7 @@ import {RegisterComponent} from './_components/_general/register/register.compon
 import {provideAnimationsAsync} from "@angular/platform-browser/animations/async";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NgOptimizedImage} from "@angular/common";
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {MatFormField} from "@angular/material/form-field";
 import {MatOption} from "@angular/material/core";
 import {MatAutocomplete, MatAutocompleteTrigger} from "@angular/material/autocomplete";
@@ -39,6 +39,12 @@ import {TruckInvoicesComponent} from './_components/_truck-manager/truck-invoice
 import {ParkingInvoicesComponent} from './_components/_parking-manager/parking-invoices/parking-invoices.component';
 import {ParkingInvoiceComponent} from './_components/_parking-manager/parking-invoice/parking-invoice.component';
 import {TruckInvoiceComponent} from './_components/_truck-manager/truck-invoice/truck-invoice.component';
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import {TranslateLoader, TranslateModule, TranslateService} from "@ngx-translate/core";
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -77,9 +83,16 @@ import {TruckInvoiceComponent} from './_components/_truck-manager/truck-invoice/
     MatAutocompleteTrigger,
     MatInput,
     MatIcon,
-    MatMiniFabButton
+    MatMiniFabButton,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
-  providers: [provideAnimationsAsync()],
+  providers: [provideAnimationsAsync(), TranslateService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

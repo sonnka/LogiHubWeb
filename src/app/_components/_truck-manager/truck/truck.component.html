@@ -1,27 +1,27 @@
 <br><br>
-<h5 style="text-align: center">Truck</h5>
+<h5 style="text-align: center">{{ 'msg110' | translate }}</h5>
 <br>
 <div>
   <button (click)="updateTruckByIot()"
-          class="my-btn">Get updated data
+          class="my-btn">{{ 'msg111' | translate }}
   </button>
 </div>
 <br>
 <div style="width: 600px">
   <div>
-    <label>Number:</label> {{ truck?.number || '' }}
+    <label>{{ 'msg112' | translate }}:</label> {{ truck?.number || '' }}
   </div>
   <hr>
   <div>
-    <label>Width:</label> {{ truck?.width | number: '1.2-2' }}
+    <label>{{ 'msg113' | translate }}:</label> {{ truck?.width | number: '1.2-2' }}
   </div>
   <div>
-    <label>Length:</label> {{ truck?.length | number: '1.2-2' }}
+    <label>{{ 'msg114' | translate }}:</label> {{ truck?.length | number: '1.2-2' }}
   </div>
   <div>
-    <label>Height:</label> {{ truck?.height | number: '1.2-2' }}
+    <label>{{ 'msg115' | translate }}:</label> {{ truck?.height | number: '1.2-2' }}
   </div>
   <div>
-    <label>Weight:</label> {{ truck?.weight | number: '1.2-2' }}
+    <label>{{ 'msg116' | translate }}:</label> {{ truck?.weight | number: '1.2-2' }}
   </div>
 </div>
